@@ -1,0 +1,41 @@
+:root { --ink: #0b0704; --paper: #fff; --line: #d8d5d2; --muted: #68635f; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Atkinson Hyperlegible", Arial, sans-serif; font-size: 18px; line-height: 1.5; }
+.shell { width: min(1160px, calc(100% - 64px)); margin-inline: auto; }
+.nav { height: 94px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; gap: 5px; align-items: center; color: inherit; text-decoration: none; font: 800 25px/1 "Montserrat", sans-serif; letter-spacing: -1.5px; }
+.brand-mark { font: 700 40px/.6 Arial, sans-serif; letter-spacing: -10px; margin-right: 6px; transform: translateY(-1px); }
+.nav-link, .eyebrow { font: 700 11px/1.2 "Montserrat", sans-serif; letter-spacing: 2px; }
+.nav-link { color: inherit; text-decoration: none; }
+.nav-link span { font-size: 18px; margin-left: 7px; }
+.hero { position: relative; padding: 92px 0 88px; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; align-items: end; gap: 40px; margin-top: 23px; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { font-family: "Montserrat", sans-serif; }
+h1 { position: relative; z-index: 1; margin-bottom: 0; font-size: clamp(48px, 7vw, 92px); line-height: .96; letter-spacing: -4px; }
+.hero-copy { position: relative; z-index: 1; max-width: 345px; padding-bottom: 8px; }
+.hero-copy p { font-size: 21px; line-height: 1.35; }
+.button { display: inline-flex; align-items: center; gap: 30px; margin-top: 12px; padding: 16px 20px; background: var(--ink); color: #fff; text-decoration: none; font: 700 11px/1 "Montserrat", sans-serif; letter-spacing: 1.25px; transition: transform .2s ease, background .2s ease; }
+.button:hover { transform: translateY(-3px); background: #333; }
+.button span { font-size: 18px; }
+.infinity { position: absolute; right: -15px; bottom: -80px; color: #f1f0ef; font: 400 470px/.7 Arial, sans-serif; letter-spacing: -90px; transform: rotate(-4deg); user-select: none; }
+.promise { border-block: 1px solid var(--ink); background: var(--ink); color: #fff; }
+.promise-grid { display: grid; grid-template-columns: .95fr 2.05fr; gap: 40px; padding: 34px 0 38px; }
+.statement { margin: 0; font: 700 clamp(29px, 4vw, 51px)/1.05 "Montserrat", sans-serif; letter-spacing: -2px; }
+.services { padding: 115px 0; }
+.section-heading { display: grid; grid-template-columns: .95fr 2.05fr; gap: 40px; margin-bottom: 48px; }
+h2 { margin: -7px 0 0; font-size: clamp(34px, 4vw, 52px); letter-spacing: -2.5px; line-height: 1.04; }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--line); }
+.service-grid article { min-height: 310px; padding: 27px 26px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.service-grid span { font: 700 11px "Montserrat", sans-serif; letter-spacing: 1.5px; }
+.service-grid h3 { margin: 57px 0 13px; font-size: 24px; line-height: 1.08; letter-spacing: -1px; }
+.service-grid p { color: var(--muted); font-size: 17px; line-height: 1.4; }
+.cta { background: var(--ink); color: white; }
+.cta-content { padding: 100px 0 105px; }
+.cta h2 { max-width: 750px; margin: 24px 0 25px; font-size: clamp(42px, 5.5vw, 73px); }
+.button-light { background: #fff; color: var(--ink); }
+.button-light:hover { background: #e8e7e5; }
+.footer { display: grid; grid-template-columns: 1fr auto auto; gap: 34px; align-items: center; padding: 30px 0; font-size: 11px; letter-spacing: 1.5px; }
+.footer p { margin: 0; }
+@media (max-width: 720px) { .shell { width: min(100% - 40px, 1160px); } .nav { height: 74px; } .nav-link { font-size: 9px; letter-spacing: 1px; } .hero { padding: 67px 0 71px; } .hero-grid, .promise-grid, .section-heading { grid-template-columns: 1fr; gap: 24px; } h1 { letter-spacing: -2.5px; } .hero-copy { max-width: 310px; } .infinity { right: 5px; bottom: -40px; font-size: 300px; } .services { padding: 75px 0; } .service-grid { grid-template-columns: 1fr; } .service-grid article { min-height: 230px; } .service-grid h3 { margin-top: 35px; } .footer { grid-template-columns: 1fr; gap: 13px; } }
