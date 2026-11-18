@@ -4,6 +4,21 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/landings",
+      "destination": "https://cordelia-landings.vercel.app/cordelia-landings"
+    },
+    {
+      "source": "/landings/:path*",
+      "destination": "https://cordelia-landings.vercel.app/cordelia-landings/:path*"
+    },
+    {
+      "source": "/cordelia-landings-static/:path*",
+      "destination": "https://cordelia-landings.vercel.app/cordelia-landings-static/:path*"
+    },
+    {
+      "source": "/logos/:path*",
+      "destination": "https://cordelia-landings.vercel.app/logos/:path*"
+    }
   ]
 }
