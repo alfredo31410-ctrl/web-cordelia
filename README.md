@@ -19,31 +19,11 @@ Después del primer despliegue entra en **Project > Settings > Domains**.
 
 Cada `git push` a la rama de producción desplegará automáticamente la nueva versión. Las demás ramas reciben enlaces de vista previa.
 
-## Landings dentro del mismo dominio
+## Landings en el mismo dominio
 
-Las campañas pueden vivir bajo el mismo dominio sin crear nuevos proyectos en Vercel. Cada landing debe tener su propio directorio dentro de `dist/landings/`:
+Este repositorio contiene únicamente la web principal. Las campañas y sus recursos pertenecen al proyecto independiente `cordelia-landings`.
 
-```text
-dist/
-├─ index.html                         # cordeliacapacitacion.com
-└─ landings/
-   ├─ curso-ley-73/
-   │  ├─ index.html                   # /cordelia-landings/curso-ley-73
-   │  └─ assets/
-   └─ taller-modalidad-40/
-      ├─ index.html                   # /cordelia-landings/taller-modalidad-40
-      └─ assets/
-```
-
-Para crear una nueva landing, usa un nombre corto en minúsculas y con guiones; por ejemplo, `curso-ley-73`. Coloca el HTML y sus recursos dentro de esa carpeta. Al hacer push, el proyecto de landings se actualizará y la web principal la mostrará automáticamente bajo el dominio de Cordelia:
-
-```text
-https://www.cordeliacapacitacion.com/cordelia-landings/curso-ley-73
-```
-
-Cada landing puede enlazar sus archivos propios con rutas relativas, por ejemplo `./assets/imagen.jpg`, para evitar conflictos con las demás campañas.
-
-La portada y las campañas son proyectos Vercel distintos. La portada conserva el único dominio público, `www.cordeliacapacitacion.com`; sus rutas `/cordelia-landings/*` se reescriben internamente hacia `cordelia-landings.vercel.app`.
+La única conexión entre ambos proyectos es el rewrite de `vercel.json`: las solicitudes a `www.cordeliacapacitacion.com/cordelia-landings/*` se sirven desde el proyecto de landings, sin incluir sus archivos en esta web.
 
 ## Desarrollo local
 
