@@ -1,6 +1,6 @@
-# Cordelia | Pensiones
+# Cordelia Entrenamiento
 
-Landing estática de Cordelia, diseñada en blanco y negro a partir de su manual de identidad visual. No requiere servidor, base de datos ni variables de entorno.
+Landing estática de Cordelia Entrenamiento, diseñada en blanco y negro a partir de su manual de identidad visual. Presenta clases para formar asesores en pensiones. No requiere servidor, base de datos ni variables de entorno.
 
 ## Publicar en Vercel
 
@@ -21,4 +21,10 @@ Cada `git push` a la rama de producción desplegará automáticamente la nueva v
 
 ## Desarrollo local
 
-Abre `dist/index.html` en un navegador o instala Vercel CLI y ejecuta `vercel dev` desde la raíz del proyecto.
+Con Node instalado, ejecuta lo siguiente desde la raíz del proyecto:
+
+```powershell
+node scripts/serve.mjs
+```
+
+Después abre `http://localhost:5500`. Detén el servidor con `Ctrl + C`.
