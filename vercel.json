@@ -5,11 +5,11 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/landings",
+      "source": "/cordelia-landings",
       "destination": "https://cordelia-landings.vercel.app/cordelia-landings"
     },
     {
-      "source": "/landings/:path*",
+      "source": "/cordelia-landings/:path*",
       "destination": "https://cordelia-landings.vercel.app/cordelia-landings/:path*"
     },
     {
